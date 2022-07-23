@@ -31,7 +31,7 @@ with ZipFile('resources/sample.zip', 'w') as myzip:
     
 or
     
-os.makedirs('resources')
+os.mkdir('resources')
 
 '''
 
