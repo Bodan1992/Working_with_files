@@ -2,13 +2,15 @@ from zipfile import ZipFile
 import csv
 import os
 import shutil
+
 from PyPDF2 import PdfReader
 from openpyxl import load_workbook
 
 
-directory = os.path.join("C:/Users/bohda/PycharmProjects/Working_with_files", "resources")
+directory = os.path.join("../working_with_files", "resources")
 if not os.path.exists(directory):
     os.mkdir(directory)
+
 
 with ZipFile('resources/sample.zip', 'w') as myzip:
     myzip.write('docs-pytest-org-en-latest.pdf')
@@ -20,7 +22,7 @@ with ZipFile('resources/sample.zip', 'w') as myzip:
 or
 
 directory = "resources"
-parent_dir = "C:/Users/bohda/PycharmProjects/Working_with_files"
+parent_dir = "../Working_with_files"
 path = os.path.join(parent_dir, directory)
 os.makedirs(path)
 
