@@ -6,11 +6,9 @@ import shutil
 from PyPDF2 import PdfReader
 from openpyxl import load_workbook
 
-
-directory = os.path.join("../working_with_files", "resources")
+directory = os.path.join(os.path.dirname(__file__), "resources")
 if not os.path.exists(directory):
     os.mkdir(directory)
-
 
 with ZipFile('resources/sample.zip', 'w') as myzip:
     myzip.write('docs-pytest-org-en-latest.pdf')
